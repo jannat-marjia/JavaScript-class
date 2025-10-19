@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>Document</title>
+</head>
+<body>
+      <!-- <h1>JAVASCRIPT CLASS</h1> 
+      <script>
+               //     window.alert("Hello,JS");
+               //let name = window.prompt("Enter your nam");
+              // console.log(name);
+
+            //   let isconfirmed = window.confirm("DO you want to continue?");
+            //    console.log(isconfirmed);
+
+
+
+        
+
+      </script>  -->
+      <!-- <h1 id="title">Hello DoM</h1>
+      <p class="text">welcome</p>
+      <h2 class="text">this is my site</h2>
+      <script>
+             const  heading = document.getElementById('title');
+             const paragraph = document.getElementsByClassName("text");
+
+             console.log(heading.innerText);
+             console.log(paragraph[0].innerHTML )
+                   console.log(paragraph[1].innerHTML ) -->
+
+
+             <!-- <div class="card"> card-1</div>  
+              <div class="card"> card-2</div>  
+               <div class="card"> card-3</div>  
+                <div class="card"> card-4</div> 
+
+              <script>
+                  const firstcard = document.querySelector('.card') 
+                  const allCards = document.querySelectorAll(".card"); 
+                  console.log(allCards); 
+                  alllCards.forEach((card) => {
+                        console.log(card.innerHTML);
+                    
+                        //card.style.border = "1px solid black";
+                  });
+                  // console.log(firstcard.innerHTML);
+                   
+              </script>  
+      
+                                    
+ 
+      </script>
+       -->
+
+
+
+
+
+      
+  <!-- <h2 id="title"> Hello World</h2>
+  <script>
+       const title = document.getElementById("title");
+       title.innerText = "Hello,Javascript";  
+
+  </script> -->
+  
+  <!-- innerHTML jekhane sekhane likha jabe na bipod jonok  -->
+    
+  <!-- <style>
+       .highlight {
+            color:red;
+            font-weight: bold;
+       }
+  </style> -->
+
+  <!-- <p id="para">This is paragraph</p>
+  <script>
+      const para = document.getElementById("para"); 
+      para.classList.add("highlight");
+     //  para.classList.remove("highlight")
+     // para.remove();
+     //  info.style.color = "red"
+     //  info.style.fontSize ="24px"
+      // info.innerHTML = "<b>Welcome to DOM!</b>";
+      
+  </script> -->
+
+
+
+
+  
+
+
+
+  <!-- <div id="container">
+
+  </div>
+
+  <script>
+     const container = document.getElementById("container");
+     const heading = document.createElement("h2")
+     heading.innerText="Welcome to DOM Creation!";
+     heading.classList.add("highlight")
+
+     const para = document.createElement("p");
+     para.innerText="This paragraph was added using Javascript!"
+     container.appendChild(heading);
+     container.appendChild(para); 
+  </script> -->
+
+
+
+
+
+
+
+   <!-- <button id="btn">Click Me</button>
+   <p id="msg"> </p>
+   <script>
+       //     const btn = document.getElementById("btn");
+       //     const msg = document.getElementById("msg");
+         const handleclick = () => {
+          msg.innerText = "Button was clicked";
+         };
+         btn.addEventListener("click", handleclick);
+
+
+     //     const btn = document.getElementById("btn");
+     //     btn.addEventListener('click', ()=>{
+     //        msg.innerText = "Button was clicked";
+     //     });
+
+
+   </script> -->
+
+
+
+   <!-- <input type="text" placeholder="Enter your name" id="name"/>
+   <p id="msg"></p>
+   <script>
+     const input = document.getElementById("name");
+     const msg = document.getElementById("msg");
+
+     input.addEventListener("keyup", () => {
+          msg.innerHTML = ` Hello, ${input.value}`;
+          console.log(input.value);
+     });
+   </script> -->
+
+
+
+
+
+<!-- 
+
+
+   <h2 id="text">Hover over me!</h2>
+   <script>
+        const text = document.getElementById("text");
+
+          text.onmouseover = function (){
+          text.style.color ="red";
+          text.innerText ="Mouse is over me...";    
+        };
+
+
+        text.onmouseout = function (){
+          text.style.color ="black";
+          text.innerText = "Hover over me!";
+
+        };
+   </script> -->
+
+   
+   
+
+   
+     <!-- <form  id ="userForm">
+          <input type="text"  placeholder="Enter Name" id="name" required />
+          <input type="email"  placeholder="Enter email" id="email" required />
+          <button type="submit">submit</button>
+     </form> 
+      <P id="output"></P>
+     <script>
+            const from = document.getElementById("userForm");
+            const output = document.getElementById("output");
+
+            form.addEventListener("submit", (e)  => {
+               console.log(e);
+               e.preventDefult();
+               const name = document.getElementById("name").value;
+               const email = document.getElementById("email").value;
+
+               output.innerText = `Name: ${name} ,  Email: ${email}`;  
+            });
+
+     </script> -->
+
+
+
+     <!-- Fetch API -->
+     <!-- File Upload -->
+          <h3>File Upload</h3>
+          <input type=" file" id="fileInput"/>
+          <button type="submit">Uplaod</button>
+    
+        
+       <!-- <button id="getBtn">Get Posts</button>
+        <ul id="postList"> -->
+
+        
+
+
+             <!-- post example -->
+         <h3>Create Post(POST)</h3>
+         <input type="text" id="title" placeholder="Title">
+         <input type="text" id="bodyText" placeholder="Body">
+         <button id="postBtn">Create Post</button>
+        </ul>
+
+
+
+
+        <!-- put example -->
+
+          <input type="number" id="update" placeholder="post ID">
+          <input type="text" id="updateTitle" placeholder="New title">
+          <button id="putBtn">update</button>
+
+
+          <!-- Deleted -->
+         <h3>Delete Post </h3>
+          <input type=" number" id="deleteId" placeholder="post id">
+           <button id="deletebtn">Deleted</button>
+        <script>
+            document.getElementById('getBtn').addEventListener('click',()=> {
+               fetch('https://jsonplaceholder.typicode.com/posts?_limit=5').then((res)=>
+               res.json()).then((data) => {
+                    const list = document.getElementById('postList');
+                    list.innerHTML = "";
+                    data.forEach((post) => {
+                      const li = document.createElement("li");
+                      li.innerHTML = `<h6>${post.title}</h6>`;
+                      list.appendChild(li);
+                    });
+
+                    // console.log(data);
+               });
+            });
+
+
+     
+
+            //   console.log("Button clicked");
+
+            //POST
+
+
+            document.getElementById('postBtn').addEventListener('click',()=> {
+               const title = document.getElementById('title').value;
+               const body = document.getElementById('bodyText').value;
+               const data = {
+                    title,body
+               };
+               console.log(data);
+               fetch('https://jsonplaceholder.typicode.com/posts',{
+                    method:'POST',
+                    header:{"Content-Type": "application/json"}, 
+                    body:JSON.stringify(data)     
+               })
+               .then(res=> res.json( ))
+               .then ((data)=> console.log(data));
+                alert("post creadted with ID:" + data.id);
+               // console.log(title,body);                           
+            });
+
+
+            //PUT 4
+            document.getElementById("putBtn").addEventListener("click",()=>{
+               const id = document.getElementById("update").value;
+               const title = document.getElementById("updateTitle").value;
+               fetch(`https://jsonplaceholder.typicode.com/posts/${id}`,{
+                    method:'PUT',
+                    headers:{'content-type':'application/json'},
+                    body:JSON.stringify({title,body:"updated Body",userID:2 }),
+               })
+
+                .then((res) => res.json())
+                .then((data) => {
+                alert('post updated:', + data.id);
+                console.log('put:',data);
+                });
+               // console.log(id,title);
+            });
+
+
+
+              document.getElementById("deleteBtn").addEventListener("click",()=>{
+               const id = document.getElementById("deleteId").value;
+               console.log(id);
+           
+             
+                  fetch(`https://jsonplaceholder.typicode.com/posts/${id}`,{
+                    method:"DELETE",
+                  }).then((res) => console.log(res));
+                   });
+
+
+
+
+
+                   //file upload
+
+                   document.getElementById('uploadFrom')
+                   .addEventListener("submit", async(e)=> {
+                    e.preventDefault();
+                    const file = document.getElementById("fileInput").files[0];
+
+                    const formData = new FormData();
+                    formData.append('myFile',file)
+
+                    const res = await fetch('http://localhost:5000/upload',{
+                         method:"post",
+                         body: formData,
+                    });
+                    const data = await res.json();
+                   });
+        </script>
+       <!-- Fetch API -->
+     
+</body>
+</html>
