@@ -1,238 +1,112 @@
+ 
 
-  1.
-   // var friendsName = "";
-   // console.log(friendsName)
-
+  //1) Write a function named ‘calculateSum’ that takes two arguments and returns their sum.
 
 
-  //  var strType ='jannat minhaz';
-  //  console.log(typeof strType)
+ function calculateSum(argument1, argument2) {
+  return argument1 + argument2;
+}
 
-   2. 
-   // var numType = 246789677900;
-   // console.log(typeof numType)
+// Example usage:
+const total = calculateSum(5, 10);
+console.log(total); // Output: 15
 
-   3. 
-   // var BoolType = true ; 
-   // console.log(typeof  BoolType)
+ //2) Write a function named ‘isEven’ that takes one argument and returns true if the number is even, and false otherwise.
 
-   // var BoolType = false ;
-   // console.log(typeof  BoolType)
+function isEven(number) {
+  return number % 2 === 0;
+}
 
-   4. 
-   // var rochona =" loremfaswuioks;xmkndhjgyeuiwopiugydhjkjm oyruhfb dooly7ryugmcnxmchfjdml.mzcnnmx.kljfihfjvb cnmcnmn"
-   // console.log (rochona.toUpperCase()) 
-   //    console.log (rochona.toLowerCase()) 
-
-    // let message =  "Hello , javascrift!";
-    // console.log(message.toLocaleUpperCase());
-    // console.log(message.toLocaleLowerCase());
-    // console.log(message.slice(7));
-    // console.log(message.indexOf("javascrift"));
-    // console.log(message.includes("javascrift"));
-    // let newmessage = Message.replace("javascrift",  "js");
-    //  console.log(newmessage);
-    // let word = Message.split("");
-    // console.log(word[1]);
-
-    
-    // let strNumbr = "30,60,70,20"
-    // let numsArr = strNumbr.split("","") ;
-    // console.log(numsArr);
-  
-   5. 
-   // var myFd ="jannat,minhaz";
-   // myFd.split( "jannat");
-
-   // console.log (myFd.split( "jannat"));
+// 3) Write a function named ‘findMax’ that takes an array of numbers and returns the largest number in the array.
 
 
-   // myFd.indexOf("m")
-   // console.log(myFd.indexOf("m"));
 
-   6. 
-//    var num1 =55;
-//    var num2 =99;
-//    console.log(num1+num2);
+function findMax(numbers) {
+  if (numbers.length === 0) {
+    return undefined; // Or throw an error, depending on desired behavior for empty arrays
+  }
 
-  //  var num1 ="55";
-  //  var num2 =99;
-  //  var num1  = parseFloat(num1);
-  //  console.log(typeof num2);
+  let max = numbers[0]; // Assume the first element is the largest
+
+  for (let i = 1; i < numbers.length; i++) {
+    if (numbers[i] > max) {
+      max = numbers[i]; // Update max if a larger number is found
+    }
+  }
+
+  return max;
+}
+
+// Example usage:
+const myNumbers = [5, 12, 3, 8, 15, 1];
+const largestNumber = findMax(myNumbers);
+console.log(largestNumber); // Output: 15
+
+const emptyArray = [];
+console.log(findMax(emptyArray)); // Output: undefined
+
+// 4) Write a function named ‘reverseString’ that takes a string and returns the string reversed.
+
+function reverseString(str) {
+  // Split the string into an array of characters
+  const charArray = str.split('');
+
+  // Reverse the order of elements in the array
+  const reversedArray = charArray.reverse();
+
+  // Join the characters back into a string
+  const reversedStr = reversedArray.join('');
+
+  return reversedStr;
+}
+
+// 5) Write a function named ‘filterOddNumbers’ that takes an array of numbers and returns a new array containing only the odd numbers.
+
+
+ function filterOddNumbers(numbers) {
+  return numbers.filter(number => number % 2 !== 0);
+}
    
 
+// 6) Write a function named ‘sumArray’ that takes an array of numbers and returns the sum of all elements.
 
 
-  //  var num1 =55;
-  //  var num2 =99;
-  //  var mot = num1 +num2 
-  //  console.log(mot)
+function sumArray(arr) {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i];
+  }
+  return sum;
+}
 
-  //  var num1 = "55";
-  //  var num2 =99;
-  //  num1 = parseFloat(num1);
-  //   num1 = parseInt(num1);
+// 7) Write a function named ‘sortArray’ that takes an array of numbers and returns a new array sorted in ascending order.
 
-  //  var mot = num1 +num2 
-  //  console.log(mot)
+function sortArray(arr) {
+  // Use the spread operator (...) to create a shallow copy of the array
+  // This prevents modifying the original array
+  const newArr = [...arr]; 
 
+  // Use the built-in sort method with a compare function for numeric sorting
+  newArr.sort((a, b) => a - b); 
 
-// var num3 = 20 ;
-// var num4 = 90 ;
+  return newArr;
+}
 
-// var total = num3+ num4 ;
-// console.log(total);
-
-// num4 = "" + num4 ;
- 
-// console.log( typeof num4); 
-
-7. 
-//  var num1 = 50;
-//  var num2 = 50; 
-//  var total =num1+num2;
-//  console.log(total)
-
-//  var num1 = 60;
-//  var num2 = 50; 
-//  var total =num1-num2;
-//  console.log(total)
-
-//  var num1 = 50;
-//  var num2 = 50; 
-//  var total =num1*num2;
-//  console.log(total)
-
-//  var num1 = 50;
-//  var num2 = 50; 
-//  var total =num1/num2;
-//  console.log(total)
-
-//  var num1 = 500;
-//  var num2 = 450; 
-//  var total = num1 % num2;
-//  console.log(total)
-
-8. 
-
-// var num1 = -20;
-// var num2 = 10; 
-// console.log(num1+num2); 
-
-// var sum = Math.abs(num1)
-// console.log(sum)
-
-// var totaNumber = 10;
-// var voter = 5.4999; 
-
-// var sum = Math.round(voter)
-// console.log(sum)
-
-// var totaNumber = 10;
-// var voter = 0.4999;
-
-// var sum = Math.ceil(voter)
-// console.log(sum)
+// 8) Write a function named ‘capitalizeFirstLetter’ that takes a string and returns the same string with the first letter capitalized. Ex-  console.log(capitalizeFirstLetter("hello"));  // Output:  "Hello"
 
 
- 
-// var voter = 0.0000001;
+function capitalizeFirstLetter(str) {
+  if (typeof str !== 'string' || str.length === 0) {
+    return str; // Return as is if not a string or empty
+  }
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}
 
-// var sum = Math.floor(voter)
-// console.log(sum)
-
-
-//  var lotary = Math.random()*100; 
- 
-//  console.log(lotary)
-
-
-//math//
-// console.log(Math.pI);
-// console.log(Math.E);
-// console.log(Math.abs(-10));
-// console.log(Math.ceil(4.3));
-// console.log(Math.floor(4.8));
-// console.log(Map);
-// console.log(Math.round(4.5));
-// console.log(Math.max(10,20,30));
-// console.log(Math.min(10,20,50));
-
-// let randomNumber  = Math.floor(Math.random()*100) + 100;
-// console.log(randomNumber);
-
-// console.log(Math.pow(3,2));
-// console.log (Math.sqart(16));
-
-//# Numbers 
-// console.log(Number.MAX_VALUE);
-// console.log(Number.MIN_VALUE) ;
-// console.log(Number.NaN); 
-// console.log(Number("45"));
-// console.log(parseFloat("3.67"));
-
-// console.log(isNaN("HELLO"));
-
-
-
-
-9.
-// let person = {
-//   firstName: "minhaz",
-//   lastName: "jannat",
-//   age: 20, 
-//   isDeveloper: true, 
-// };
-// //console.log(person.lastName);
-// //console.log(person.["lastName"]);
-// console.log(person);
-// //add
-// person.country = "Bangladesh";
-// console.log(person);
-// //modify 
- 
-// let person = {
-//   firstName: "minhaz",
-//   lastName: "jannat",
-//   age: 20, 
-//   isDeveloper: true, 
-// }
-
-//  let personkeys = Object.keys(person);
-// //  console.log(personkeys);
-//  let personvalues = Object.values(person);
-// //  console.log(personvalues);
-
-//  let personEntries = Object.entries(person);
-// //  console.log(personEntries);
-
- //#JSON
-  // let student = {
-  //      name: "minhaz",
-  //      age: 23,
-  //      city:"suide",
-        
-
-  // };
-  // let jsonString = JSON.stringify(student);
-  // console.log(jsondtring);
-  // let jsonData = {"name": "minhaz","age":"23","city":"feni" }
-  // let obj = JSON.parse(jsonData);
-  // console.log(obj.age);
-
-
-
-
-
-
- 
-
- 
-
-
- 
-
-
+console.log(capitalizeFirstLetter("hello"));  // Output: "Hello"
+console.log(capitalizeFirstLetter("world"));  // Output: "World"
+console.log(capitalizeFirstLetter("javascript")); // Output: "Javascript"
+console.log(capitalizeFirstLetter(""));      // Output: ""
+console.log(capitalizeFirstLetter(123));     // Output: 123
 
 
 
